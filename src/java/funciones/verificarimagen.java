@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import funciones.Metodos;
+import funciones.validaImg;
 import java.util.List;
 
 @WebServlet(name = "verificarimagen", urlPatterns = {"/verificarimagen"})
@@ -14,7 +14,7 @@ public class verificarimagen extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Metodos metodos = new Metodos();
+        validaImg metodos = new validaImg();
         String rutaReal = getServletContext().getRealPath("/imagenesvideojuegos");
 
         try {
