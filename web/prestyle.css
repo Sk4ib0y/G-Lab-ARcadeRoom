@@ -1,0 +1,207 @@
+:root {
+    --dark-background: #120a2e;
+    --primary-accent: #e6007e; 
+    --secondary-accent: #00e6e6; 
+    --text-light: #f0f0f0; 
+    --card-background: rgba(255, 255, 255, 0.08); 
+    --border-color: rgba(255, 255, 255, 0.2); 
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --input-bg: rgba(255, 255, 255, 0.1); 
+    --input-border: rgba(255, 255, 255, 0.25); 
+    --button-bg: var(--primary-accent); 
+    --button-hover-bg: #ff3399; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, var(--dark-background) 0%, #2a0f5a 100%);
+    color: var(--text-light);
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 2rem; 
+    justify-content: center; 
+    align-items: flex-start; 
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.Precioconsola {
+
+    background: var(--card-background);
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin: 1.5rem 0; 
+    box-shadow: 0 8px 30px var(--shadow-color);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--border-color);
+
+    width: 90%;
+    max-width: 380px; 
+    min-height: 400px; 
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    box-sizing: border-box;
+}
+
+.Precioconsola:hover {
+    box-shadow: 0 12px 45px var(--shadow-color), 0 0 18px var(--primary-accent); /* Brillo al pasar el cursor */
+}
+
+.Preciopaquete {
+   
+    background: var(--card-background);
+    border-radius: 12px;
+    padding: 1.8rem; 
+    margin: 1.5rem 0; 
+    box-shadow: 0 8px 30px var(--shadow-color);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--border-color);
+
+    width: 90%; 
+    max-width: 380px;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--text-light); 
+}
+
+.Preciopaquete:hover {
+    box-shadow: 0 12px 45px var(--shadow-color), 0 0 18px var(--primary-accent); 
+}
+
+.titulo {
+    font-size: 2.2rem; 
+    font-weight: bold;
+    text-align: center;
+    color: var(--secondary-accent); 
+    font-style: italic;
+    margin-bottom: 1.2rem; 
+    text-shadow: 0 0 10px rgba(0, 230, 230, 0.7);
+}
+
+.titulo2 {
+    font-size: 1.6rem; 
+    font-style: italic;
+    font-weight: bold;
+    color: var(--primary-accent);
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 8px rgba(230, 0, 126, 0.5); 
+}
+
+.pantallaind {
+    color: var(--text-light); 
+    font-size: 1.05rem; 
+    line-height: 1.6; 
+    text-align: center; 
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    width: 100%; 
+}
+
+.pantallagrande {
+    
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 1rem; 
+    margin-bottom: 1.5rem; 
+    flex-grow: 1; 
+    width: 100%;
+}
+
+.link {
+    
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--text-light);
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.link:hover {
+    background-color: var(--button-hover-bg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); 
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 0.8rem;
+    }
+    .Precioconsola,
+    .Preciopaquete {
+        width: 95%; 
+        padding: 1.2rem;
+        margin: 1rem 0;
+        min-height: 350px;
+    }
+    .titulo {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .titulo2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .pantallaind,
+    .pantallagrande {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    .link {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Precioconsola,
+    .Preciopaquete {
+        width: 98%;
+        padding: 1rem;
+        margin: 0.8rem 0;
+        min-height: 300px;
+    }
+    .titulo {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    .titulo2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    .pantallaind,
+    .pantallagrande {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+    }
+    .link {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+        margin-top: 1rem;
+    }
+}

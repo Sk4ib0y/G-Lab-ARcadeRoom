@@ -1,0 +1,64 @@
+.Precioconsola
+{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    background-color: #FF2DAF;
+    height: 479px;
+    width: 400px;
+}
+.titulo
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #00B4FF;
+    font-style: italic;
+}
+.titulo2
+{
+    font-size: 23px;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.pantallaind
+{
+    color: #00B4FF;
+    font-size:16px;
+    line-height: 25px;
+
+
+}
+
+.pantallagrande
+{
+    position: absolute;
+    top: 310px;
+    left:150px;
+    color: #00B4FF;
+    font-size:16px;
+    line-height: 25px;
+}
+
+
+.Preciopaquete
+{
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    background-color: #FF2DAF;
+    height: 479px;
+    color:#00B4FF;
+    width: 400px;
+}
+
+.link
+{
+    position: absolute;
+    top:450px;
+}

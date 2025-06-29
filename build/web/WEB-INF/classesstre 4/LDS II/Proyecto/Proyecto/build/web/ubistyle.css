@@ -1,0 +1,32 @@
+.Texto
+{
+    color:white;
+    position: absolute;
+    top: 10px;
+    left: 275px;
+    align-content: center;
+}
+
+.texto2
+{
+    color: white;
+    position: absolute;
+    top:50px;
+    left:380px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.imagen
+{
+    display: table;
+    position:absolute;
+    top: 120px;
+    left: 400px;
+}
+
+.link
+{
+    position: absolute;
+    top:450px;
+}

@@ -1,0 +1,31 @@
+.menu
+{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    background-color: #FF2DAF;
+    height: 479px;
+    width: 500px;
+}
+.titulo
+{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color:#00B4FF;
+    font-size: 25px;
+}
+.texto
+{
+    color:#00B4FF;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 28px;
+
+}
+.link
+{
+    position: absolute;
+    top:450px;
+}
