@@ -3,14 +3,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Alimentos</title>
+    <title>Lista de Videojuegos</title>
 </head>
         <link rel="stylesheet" href="style.css?v=3" media="screen">
 <body>
-<h2>Lista de Alimentos</h2>
+<h2>Lista de Videojuegos</h2>
 <table border="1">
     <tr>
-        <th>ID</th><th>Elemento</th><th>Precio</th><th>Acciones</th>
+        <th>ID</th><th>Alimento</th><th>Precio</th><th>Acciones</th>
     </tr>
 <%
     try {
@@ -26,8 +26,8 @@
         <td><%= rs.getString("elemento") %></td>
         <td>$<%= rs.getString("precio") %></td>
         <td>
+            <a href="cambiosMenu.jsp?id=<%= rs.getInt("id") %>">Editar</a> 
             <a href="bajasMenu.jsp?id=<%= rs.getInt("id") %>">Eliminar</a>
-            <a href="cambiosMenu.jsp?id=<%= rs.getInt("id") %>">Editar</a>
         </td>
     </tr>
 <%
@@ -41,3 +41,4 @@
 <a href="index2.html">Volver al Menú de Administrador</a>
 </body>
 </html>
+

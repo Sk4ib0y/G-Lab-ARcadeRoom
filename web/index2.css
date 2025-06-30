@@ -29,28 +29,27 @@ body {
 }
 
 .gestor-page-container {
-    display: flex; /* Para organizar la barra lateral y el contenido principal */
+    display: flex; 
     width: 100%;
-    max-width: 1400px; /* Ancho máximo para todo el contenedor */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
+    max-width: 1400px; 
+    height: 100vh; 
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
     border-radius: 15px;
-    overflow: hidden; /* Asegura que los bordes redondeados se apliquen bien */
+    overflow: hidden; 
 }
 
-/* Barra lateral izquierda con las tarjetas de gestión */
 .gestor-sidebar-menu {
     background-color: var(--dark-background);
     color: var(--text-light);
     padding: 2rem;
-    width: 320px; /* Ancho un poco mayor para las tarjetas */
+    width: 320px; 
     flex-shrink: 0;
     display: flex;
-    flex-direction: column; /* Apila las tarjetas verticalmente */
-    gap: 1.5rem; /* Espacio entre las tarjetas */
+    flex-direction: column; 
+    gap: 1.5rem; 
     box-sizing: border-box;
-    border-right: 1px solid var(--border-color); /* Línea divisoria */
-    overflow-y: auto; /* Permite scroll si hay muchas tarjetas */
+    border-right: 1px solid var(--border-color); 
+    overflow-y: auto; 
 }
 
 .gestor-card {
@@ -59,7 +58,7 @@ body {
     padding: 1.5rem;
     box-shadow: 0 8px 30px var(--shadow-color);
     border: 1px solid var(--border-color);
-    width: 100%; /* Ocupa el ancho completo de la barra lateral */
+    width: 100%; 
     box-sizing: border-box;
 }
 
@@ -74,7 +73,7 @@ body {
 }
 
 .gestor-card ul {
-    list-style: none; /* Quita los puntos de la lista */
+    list-style: none; 
     padding: 0;
     margin: 0;
 }
@@ -87,7 +86,7 @@ body {
     text-decoration: none;
     color: var(--link-color);
     font-size: 1.1rem;
-    display: block; /* Para que ocupe todo el ancho y sea más fácil hacer clic */
+    display: block; 
     padding: 0.3rem 0.5rem;
     border-radius: 5px;
 }
@@ -108,8 +107,8 @@ body {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    display: block; /* Ocupa todo el ancho disponible */
-    margin-top: 2rem; /* Espacio superior para separarlo de las cards */
+    display: block; 
+    margin-top: 2rem; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -118,17 +117,14 @@ body {
 }
 
 
-/* Área principal derecha para el título y contenido */
 .gestor-main-content {
-    flex-grow: 1; /* Ocupa todo el espacio restante */
+    flex-grow: 1; 
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
     padding: 2rem;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* Apila el título y futuro contenido */
-    align-items: flex-start; /* Alinea el título a la izquierda (por defecto) */
-    /* Para el título "más a la derecha", vamos a moverlo con margin-left en el título mismo.
-       Aquí damos un borde para que se vea el área, como en image_47360e.jpg */
+    flex-direction: column; 
+    align-items: flex-start; 
     border: 2px solid var(--border-color);
 }
 
@@ -138,12 +134,10 @@ body {
     margin-top: 0;
     margin-bottom: 1.5rem;
     text-shadow: 0 0 10px rgba(0, 230, 230, 0.5);
-    align-self: center; /* Centra el título horizontalmente en esta área */
-    padding-left: 20%; /* Mueve el título más a la derecha dentro de su contenedor */
+    align-self: center; 
+    padding-left: 20%; 
 }
 
-
-/* --- Media Queries para Responsividad --- */
 
 @media (max-width: 992px) {
     .gestor-page-container {
@@ -151,7 +145,7 @@ body {
         height: auto;
         border-radius: 0;
         box-shadow: none;
-        padding: 1.5rem; /* Añade padding para móviles */
+        padding: 1.5rem; 
     }
 
     .gestor-sidebar-menu {
@@ -159,7 +153,7 @@ body {
         padding: 1.5rem;
         border-right: none;
         border-bottom: 1px solid var(--border-color);
-        gap: 1rem; /* Menos espacio entre tarjetas en móvil */
+        gap: 1rem; 
     }
 
     .gestor-card {
@@ -178,14 +172,14 @@ body {
 
     .gestor-main-content {
         padding: 1.5rem;
-        height: auto; /* Altura automática en móvil */
-        border: none; /* Quitar borde en móvil si molesta */
-        align-items: center; /* Centra todo en el contenido principal en móvil */
+        height: auto; 
+        border: none; 
+        align-items: center; 
     }
     .gestor-main-title {
         font-size: 2rem;
-        padding-left: 0; /* Quita el padding-left para que se centre bien */
-        text-align: center; /* Centra el texto del título */
+        padding-left: 0; 
+        text-align: center; 
     }
 }
 
