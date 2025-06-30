@@ -1,6 +1,5 @@
 <%@ page import="java.sql.*" %>
         <link rel="stylesheet" href="style.css?v=3" media="screen">
-
 <%
 Class.forName("com.mysql.cj.jdbc.Driver");
 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/videojuegos", "root", "1608");
@@ -8,11 +7,14 @@ Statement st = con.createStatement();
 
 if ("POST".equalsIgnoreCase(request.getMethod())) {
     int id = Integer.parseInt(request.getParameter("id"));
-    String nombre = request.getParameter("consola");
-    st.executeUpdate("UPDATE consola SET Consola='" + nombre + "' WHERE id=" + id);
+    String Consola = request.getParameter("Consola");
+    String Estado = request.getParameter("Estado");
+    String Observaciones = request.getParameter("Observaciones");
+
+    st.executeUpdate("UPDATE consola SET consola='" + Consola + "', Estado='" + Estado + "', Observaciones='" + Observaciones + "' WHERE id=" + id);
     con.close();
-    out.println("<p>Consola actualizada.</p>");
-    out.println("<script>setTimeout(function() { window.location.href = 'index.html'; }, 1500);</script>");
+    out.println("<p>Consola actualizado.</p>");
+    out.println("<script>setTimeout(function() { window.location.href = 'index2.html'; }, 1500);</script>");
     return;
 }
 
@@ -23,10 +25,12 @@ rs.next();
 
 <form method="post">
   <input type="hidden" name="id" value="<%= id %>">
-  Consola: <input type="text" name="consola" value="<%= rs.getString("Consola") %>"><br>
+  <input type="hidden" name="Consola" value="<%= rs.getString("consola") %>"><br>
+  Estado: <input type="text" name="Estado" value="<%= rs.getString("estado") %>"><br>
+  Observaciones: <input type="text" name="Observaciones" value="<%= rs.getString("Observaciones") %>"><br>
   <input type="submit" value="Actualizar">
 </form>
+
 <%
 con.close();
 %>
-<a href="Indexxxx.html" class="back-link">Volver al Menú Principal</a>

@@ -1,6 +1,27 @@
-        <link rel="stylesheet" href="style.css?v=2" media="screen">
+<link rel="stylesheet" href="style.css?v=2" media="screen">
 <form action="altaConsola.jsp" method="post">
-  Nombre de la consola: <input type="text" name="consola"><br>
-  <input type="submit" value="Guardar">
+    <h1>Consola:</h1>
+    <select name="consolas">
+        <option value="1">PS3</option>
+        <option value="2">PS5</option>
+        <option value="3">Xbox 360</option>
+        <option value="4">Xbox Series S</option>
+        <option value="5">Xbox Series X</option>
+        <option value="6">Nintendo Switch</option>
+        <option value="7">PC</option>
+    </select><br>
+    <h1>Estado en el que se encuentra</h1>
+    <label>
+        <input type="radio" name="estado" value="1">  En uso  
+    </label>
+    <label>
+        <input type="radio" name="estado" value="2">  Disponible  
+    </label>
+    <label>
+        <input type="radio" name="estado" value="3">  En Reparacion  
+    </label>
+    <br>
+    <h1>Observaciones de la consola (No obligatorio)</h1><input type="text" name="observaciones" id="observaciones"> 
+    <br>
+    <input type="submit" value="Guardar">
 </form>
-

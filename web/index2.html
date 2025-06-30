@@ -4,30 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de Videojuegos y Consolas</title>
-        <link rel="stylesheet" href="style.css" media="screen">
-</head>
+    <link rel="stylesheet" href="index2.css"> </head>
 <body>
 
-    <h1>Gestor de Videojuegos y Consolas</h1>
+    <div class="gestor-page-container">
+        <div class="gestor-sidebar-menu">
+            
+            <div class="gestor-card">
+                <h2>Videojuegos</h2>
+                <ul>
+                    <li><a href="alta_videojuego.html">Alta de Videojuego</a></li>
+                    <li><a href="readVideojuego1.jsp">Lista / Bajas / Cambios</a></li>
+                </ul>
+            </div>
 
-    <div class="container">
-        <div class="card">
-            <h2>Videojuegos</h2>
-            <ul>
-                <li><a href="alta_videojuego.html">Alta de Videojuego</a></li>
-                <li><a href="readVideojuego.jsp">Lista / Bajas / Cambios</a></li>
-            </ul>
+            <div class="gestor-card">
+                <h2>Consolas</h2>
+                <ul>
+                    <li><a href="alta_consola.html">Alta de Consola</a></li>
+                    <li><a href="readConsola1.jsp">Lista / Bajas / Cambios</a></li>
+                </ul>
+            </div>
+
+            <div class="gestor-card">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="alta_Menu.html">Alta de Menu</a></li>
+                    <li><a href="readMenu.jsp">Lista / Bajas / Cambios</a></li>
+                </ul>
+            </div>
+
+            <div class="gestor-card">
+                <h2>Precios</h2>
+                <ul>
+                    <li><a href="alta_precio.html">Alta de Precios</a></li>
+                    <li><a href="readPrecios.jsp">Lista / Bajas / Cambios</a></li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="volver-button">Cerrar Sesion</a>
         </div>
 
-        <div class="card">
-            <h2>Consolas</h2>
-            <ul>
-                <li><a href="alta_consola.html">Alta de Consola</a></li>
-                <li><a href="readConsola.jsp">Lista / Bajas / Cambios</a></li>
-            </ul>
-        </div>
+        <div class="gestor-main-content">
+            <h1 class="gestor-main-title">Gestor de Administrador</h1>
+            </div>
     </div>
 
-    <div class="link"><a href="index.html">Volver</a></div>
 </body>
 </html>

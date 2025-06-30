@@ -22,4 +22,4 @@ try{
     out.println("<p>Error: "+e.getMessage()+"</p>");
 }
 %>
-<a href="readVideojuego.jsp">Volver a la lista</a>
+<a href="readVideojuego1.jsp">Volver a la lista</a>

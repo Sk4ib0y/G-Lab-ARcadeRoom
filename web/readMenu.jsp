@@ -3,31 +3,32 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Videojuegos</title>
+    <title>Lista de Alimentos</title>
 </head>
         <link rel="stylesheet" href="style.css?v=3" media="screen">
 <body>
-<h2>Lista de Videojuegos</h2>
+<h2>Lista de Alimentos</h2>
 <table border="1">
     <tr>
-        <th>ID</th><th>Nombre</th><th>Imagen</th><th>Género</th><th>Plataforma</th>
+        <th>ID</th><th>Elemento</th><th>Precio</th><th>Acciones</th>
     </tr>
 <%
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/videojuegos", "root", "1608");
         Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery("SELECT * FROM videojuego");
+        ResultSet rs = st.executeQuery("SELECT * FROM menu");
 
         while(rs.next()){
 %>
     <tr>
         <td><%= rs.getInt("id") %></td>
-        <td><%= rs.getString("nombre") %></td>
-        <td><img src="<%= request.getContextPath() %>/imagenesvideojuegos/<%= rs.getString("imagen") %>.jpg" height="100" width="100" /></td>
-        <td><%= rs.getString("genero") %></td>
-        <td><%= rs.getString("plataforma") %></td>
-
+        <td><%= rs.getString("elemento") %></td>
+        <td>$<%= rs.getString("precio") %></td>
+        <td>
+            <a href="bajasMenu.jsp?id=<%= rs.getInt("id") %>">Eliminar</a>
+            <a href="cambiosMenu.jsp?id=<%= rs.getInt("id") %>">Editar</a>
+        </td>
     </tr>
 <%
         }
@@ -37,7 +38,6 @@
     }
 %>
 </table>
-<a href="index.html">Volver al menú</a>
+<a href="index2.html">Volver al Menú de Administrador</a>
 </body>
 </html>
-

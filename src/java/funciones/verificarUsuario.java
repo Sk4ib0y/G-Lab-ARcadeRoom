@@ -22,12 +22,12 @@ public class verificarUsuario extends HttpServlet {
         
         if(encontrado)
         {
-         resp.sendRedirect("vistadueno.jsp");//Redirige a la vista dueño aun no implementado  
+         resp.sendRedirect("index2.html");
             System.out.println("vista dueno");
         }
         else
         {
-         resp.sendRedirect("index.html?error=1");//Redirige a la vista usuario   
+         resp.sendRedirect("index.html?error=1");
             System.out.println("vista usuario");
         }
     }

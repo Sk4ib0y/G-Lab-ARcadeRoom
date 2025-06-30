@@ -10,7 +10,7 @@
 <h2>Lista de Videojuegos</h2>
 <table border="1">
     <tr>
-        <th>ID</th><th>Nombre</th><th>Imagen</th><th>Género</th><th>Plataforma</th>
+        <th>ID</th><th>Nombre</th><th>Imagen</th><th>Género</th><th>Plataforma</th><th>Acciones</th>
     </tr>
 <%
     try {
@@ -27,7 +27,10 @@
         <td><img src="<%= request.getContextPath() %>/imagenesvideojuegos/<%= rs.getString("imagen") %>.jpg" height="100" width="100" /></td>
         <td><%= rs.getString("genero") %></td>
         <td><%= rs.getString("plataforma") %></td>
-
+        <td>
+            <a href="cambiosVideojuego.jsp?id=<%= rs.getInt("id") %>">Editar</a> 
+            <a href="bajasVideojuego.jsp?id=<%= rs.getInt("id") %>">Eliminar</a>
+        </td>
     </tr>
 <%
         }
@@ -37,7 +40,7 @@
     }
 %>
 </table>
-<a href="index.html">Volver al menú</a>
+<a href="index2.html">Volver al Menú de Administrador</a>
 </body>
 </html>
 

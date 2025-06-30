@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css" media="screen">
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Ítem de Menú</title>
+</head>
+<body>
+
+    <h2>Alta de Nuevo Ítem de Menú</h2>
+    <form action="alta_menu.jsp" method="post">
+        <label for="nombre">Nombre del Ítem:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        
+        <label for="precio">Precio:</label><br>
+        <input type="number" id="precio" name="precio" step="0.01" min="0" required><br><br>
+        
+        <button type="submit">Añadir al Menú</button>
+    </form>
+    
+    <br>
+    <a href="readMenu.jsp">Ver Menú Completo</a><br>
+    <a href="index2.html">Volver al menu de desarrollador</a>
+
+</body>
+</html>

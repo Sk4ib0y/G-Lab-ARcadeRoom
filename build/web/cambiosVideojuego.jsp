@@ -15,7 +15,7 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
     st.executeUpdate("UPDATE videojuego SET nombre='" + nombre + "', imagen='" + imagen + "', genero='" + genero + "', plataforma='" + plataforma + "' WHERE id=" + id);
     con.close();
     out.println("<p>Videojuego actualizado.</p>");
-    out.println("<script>setTimeout(function() { window.location.href = 'index.html'; }, 1500);</script>");
+    out.println("<script>setTimeout(function() { window.location.href = 'index2.html'; }, 1500);</script>");
     return;
 }
 

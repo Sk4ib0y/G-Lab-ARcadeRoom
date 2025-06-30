@@ -11,4 +11,4 @@ st.executeUpdate("DELETE FROM videojuego WHERE id=" + id);
 con.close();
 %>
 <p>Videojuego eliminado.</p>
-<a href="index.html" class="back-link">Volver al Menú Principal</a>
+<a href="index2.html" class="back-link">Volver al Menú de Admin</a>

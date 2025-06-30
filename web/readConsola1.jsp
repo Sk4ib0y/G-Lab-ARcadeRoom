@@ -10,7 +10,7 @@
         <h2>Lista de Consolas</h2>
         <table border="1">
             <tr>
-                <th>ID</th><th>Consola</th><th>Estado</th><th>Observaciones</th>
+                <th>ID</th><th>Consola</th><th>Estado</th><th>Observaciones</th><th>Acciones</th>
             </tr>
             <%
                 try {
@@ -25,7 +25,10 @@
                 <td><%= rs.getString("Consola")%></td>
                 <td><%= rs.getString("Estado")%></td>
                 <td><%= rs.getString("Observaciones")%></td>
-
+                <td>
+                    <a href="cambiosConsola.jsp?id=<%= rs.getInt("id")%>">Editar</a> |
+                    <a href="bajasConsola.jsp?id=<%= rs.getInt("id")%>">Eliminar</a>
+                </td>
             </tr>
             <%
                     }
@@ -56,6 +59,6 @@
             </ul>
         </table>
 
-        <a href="index.html">Volver al menú</a>
+        <a href="index2.html">Volver al menú de administrador</a>
     </body>
 </html>
